@@ -50,7 +50,6 @@ async def addfilter(client, message):
     ):
         return
 
-
     if len(args) < 2:
         await message.reply_text("Command Incomplete :(", quote=True)
         return
@@ -83,13 +82,4 @@ async def addfilter(client, message):
             alert = None
         except Exception as e:
             reply_text = ""
-            btn = "[]" 
-            fileid = None
-            alert = None
-
-    elif message.reply_to_message and message.reply_to_message.media:
-        try:
-            msg = get_file_id(message.reply_to_message)
-            fileid = msg.file_id if msg else None
-            reply_text
-
+            btn = "[]"
