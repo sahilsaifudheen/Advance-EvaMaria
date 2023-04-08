@@ -95,4 +95,8 @@ class Database:
         chat = await self.grp.find_one({'id': int(chat)})
         return False if not chat else chat.get('chat_status')
 
-    async def re_enable_chat(self, id
+    async def re_enable_chat(self, id):
+        chat_status = dict(
+            is_disabled=False,
+            reason=""
+       
